@@ -43,7 +43,7 @@ def main():
         set_table_background_image(table_background_image_path)
 
         # Add an image at the top of the sidebar
-        image_url = "code/UPM.png"
+        image_url = "Code/UPM.png"
         st.sidebar.image(image_url, use_container_width=True, width=200)
 
         st.sidebar.header("Interactive Model Performance and Explainability (IMPEx)")
