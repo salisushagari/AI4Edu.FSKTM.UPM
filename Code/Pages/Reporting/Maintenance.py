@@ -12,12 +12,12 @@ def show_maintenance_page():
     st.write("**These courses need to be redeveloped (according to low average accuracy):**")
 
     try:
-        st.image("AVG.png", use_column_width=True)
+        st.image("Code/Pages/Reporting/AVG.png", use_container_width=True)
     except Exception as e:
         st.error(f"Error displaying the image: {e}")
 
     # Read AVG.csv file and display its content
-    avg_df = pd.read_csv("AVG.csv")
+    avg_df = pd.read_csv("Code/Pages/Reporting/AVG.csv")
     st.write("**List of All Courses with Accuracy below 60%:**")
     st.write(avg_df)
 
@@ -25,8 +25,8 @@ def show_maintenance_page():
     st.session_state.maintenance_page_shown = True
 
 # If this script is run directly, show the maintenance page
-if __name__ == "__main__":
-    show_maintenance_page()
+#if __name__ == "__main__":
+    #show_maintenance_page()
 
 # Add a show method to be called from app.py
 def show():
